@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đang tải file con chuột...</title>
+    <title>Đang tải con trỏ chuột Windows 11 Concept...</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,19 +28,18 @@
 <body>
 
     <div class="box">
-        <h2>File con chuột của bạn đang được tải xuống...</h2>
-        <p>Nếu quá trình tải không tự động bắt đầu, hãy <a id="download-link" href="chuot.zip" download>bấm vào đây để tải thủ công</a>.</p>
+        <h2>File con trỏ chuột Windows 11 Concept đang được tự động tải xuống...</h2>
+        <p>Nếu quá trình tải không bắt đầu, hãy <a id="download-link" href="windows_11_cursors_concept_by_jepricreations_densjkc.zip" download>bấm vào đây để tải trực tiếp</a>.</p>
     </div>
 
     <script>
-        // Tự động kích hoạt hành động tải xuống ngay khi trang load xong
         window.onload = function() {
             var link = document.getElementById('download-link');
             
-            // Tạo một thẻ <a> ngầm để kích hoạt tải tự động
+            // Kích hoạt tự động tải file zip
             var a = document.createElement('a');
-            a.href = link.href;
-            a.download = 'chuot.zip'; // Tên file khi tải về máy người dùng
+            a.href = link.getAttribute('href');
+            a.download = link.getAttribute('href');
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
